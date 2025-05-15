@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops in JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .output {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #555;
+        }
+        p {
+            color: #777;
+        }
+        .alert {
+            color: red;
+            font-weight: bold;
+        }
+        .confirm {
+            color: green;
+            font-weight: bold;
+        }
+        .prompt {
+            color: blue;
+            font-weight: bold;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 200px;
+        }
+        .hover {
+            color: orange;
+            font-weight: bold;
+        }
+        .out {
+            color: purple;
+            font-weight: bold;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <h1>for loop using JavaScript</h1>
+    <div class="output" id="forLoopOutput"></div>
+
+    <h1>while loop using JavaScript</h1>
+    <div class="output" id="whileLoopOutput"></div>
+
+    <h1>do while loop using JavaScript</h1>
+    <div class="output" id="doWhileLoopOutput"></div>
+
+    <script>
+        // For loop
+        let forOutput = "";
+        for (let i = 0; i < 10; i++) {
+            forOutput += i + "<br>";
+        }
+        document.getElementById("forLoopOutput").innerHTML = forOutput;
+
+        // While loop
+        let whileOutput = "";
+        let i = 10;
+        while (i < 20) {
+            whileOutput += i + "<br>";
+            i++;
+        }
+        document.getElementById("whileLoopOutput").innerHTML = whileOutput;
+
+        // Do while loop
+        let doWhileOutput = "";
+        let j = 30;
+        do {
+            doWhileOutput += j + "<br>";
+            j++;
+        } while (j <40);
+        document.getElementById("doWhileLoopOutput").innerHTML = doWhileOutput;
+    </script>
+
+</body>
+</html>

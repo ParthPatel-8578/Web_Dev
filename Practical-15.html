@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert, Confirm, and Prompt Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        h1 {
+            font-size: 24px;
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+        .output {
+            font-size: 16px;
+            color: #000;
+            margin-top: 10px;
+        }
+    </style>    
+</head>
+<body>
+
+    <section>
+        <h1>Alert box example</h1>
+        <button onclick="showAlert()">Click me</button>
+    </section>
+
+    <section>
+        <h1>Confirm box example</h1>
+        <button onclick="showConfirm()">Click me</button>
+    </section>
+
+    <section>
+        <h1>Prompt box example</h1>
+        <button onclick="showPrompt()">Click me</button>
+    </section>
+
+    <script>
+        function showAlert() {
+            alert("Hello! This is an alert box.");
+        }
+
+        function showConfirm() {
+            let result = confirm("Are you sure you want to proceed?");
+            if (result) {
+                alert("You clicked OK!");
+            } else {
+                alert("You clicked Cancel!");
+            }
+        }
+
+        function showPrompt() {
+            let name = prompt("Please enter your name:");
+            if (name) {
+                alert("Hello, " + name + "!");
+            } else {
+                alert("You didn't enter a name.");
+            }
+        }
+    </script>
+
+</body>
+</html>

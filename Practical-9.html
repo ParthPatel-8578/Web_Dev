@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+            color: #540a0a;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+
+        }
+        p {
+            color: #540a0a;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <p>Hello Moto</p>
+    <script>
+        let fruits = ["apple", "banana", "orange"];
+        fruits.splice(1, 0, "kiwi", "mango");
+        document.write(fruits);
+        document.write("<br>");
+        fruits.pop() 
+        document.write(fruits);
+        document.write("<br>");
+        fruits.join(", ");
+        document.write(fruits);
+        document.write("<br>");
+        fruits.push("jamun", "cherry");
+        document.write(fruits);
+        document.write("<br>");
+        fruits.shift();
+        document.write(fruits);
+        document.write("<br>");
+        fruits.unshift("grapes", "guava");
+        document.write(fruits);
+        document.write("<br>");
+        fruits.reverse();
+        document.write(fruits);
+        document.write("<br>");
+        fruits.sort();
+        document.write(fruits);
+
+        </script>
+</body>
+
+</html>
