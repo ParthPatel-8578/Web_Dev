@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Practical-25</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+        text-align: center;
+        padding: 50px;
+        }
+        button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        }
+        button:hover {
+        background-color: #007BFF;
+        color: white;
+        }
+        </style>
+</head>
+<body>
+
+  <h1>Toggle Paragraph</h1>
+
+  <button onclick="toggleText()">Show/Hide Message</button>
+
+  <p id="message" style="display: none;">
+    This is a toggleable message. Click the button to show or hide this text.
+  </p>
+
+  <script>
+    function toggleText() {
+      const message = document.getElementById("message");
+
+      if (message.style.display === "none") {
+        message.style.display = "block";
+      } else {
+        message.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Practical-32</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+        text-align: center;
+        padding: 50px;
+        }
+        button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        }
+        button:hover {
+        background-color: #007BFF;
+        color: white;
+        }
+        </style>
+</head>
+<body>
+
+  <h1>Find If a Number is in an Array</h1>
+
+  <input type="number" id="numberInput" placeholder="Enter a number">
+  <button onclick="checkNumberInArray()">Check</button>
+
+  <p id="result"></p>
+
+  <script>
+    function checkNumberInArray() {
+      const numbers = [10, 25, 30, 45, 50];
+      const input = parseFloat(document.getElementById("numberInput").value);
+      const result = document.getElementById("result");
+
+      if (isNaN(input)) {
+        result.textContent = "Please enter a valid number.";
+        return;
+      }
+
+      if (numbers.includes(input)) {
+        result.textContent = input + " is in the array.";
+      } else {
+        result.textContent = input + " is not in the array.";
+      }
+    }
+  </script>
+
+</body>
+</html>

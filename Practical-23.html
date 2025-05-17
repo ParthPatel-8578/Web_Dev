@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Practical-23</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      text-align: center;
+      padding: 50px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #007BFF;
+      color: white;
+    }
+    #studentDetails {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h2>Student Information</h2>
+  <button onclick="showStudentInfo()">Show Student Info</button>
+
+  <div id="studentDetails"></div>
+
+  <script>
+    function showStudentInfo() {
+      // Create the student object
+      const student = {
+        name: "Alex Johnson",
+        age: 20,
+        course: "Computer Science"
+      };
+
+      // Get the element to display details
+      const output = document.getElementById("studentDetails");
+
+      // Display student info on the webpage
+      output.innerHTML = `
+        <p><strong>Name:</strong> ${student.name}</p>
+        <p><strong>Age:</strong> ${student.age}</p>
+        <p><strong>Course:</strong> ${student.course}</p>
+      `;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-2</title>
+</head>
+<body>
+    <h1>Sum of First N Numbers</h1>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <button onclick="calculateSum()">Calculate Sum</button>
+    <script>
+        function calculateSum() {
+            const number = document.getElementById('numberInput').value;
+            const result = document.getElementById('result');
+
+            if (number === '') {
+                result.textContent = 'Please enter a number.';
+                return;
+            }
+
+            if (isNaN(number)) {
+                result.textContent = 'Invalid input. Please enter a valid number.';
+                return;
+            }
+
+            let sum = 0;
+            for (let i = 1; i <= number; i++) {
+                sum += i;
+            }
+
+            result.textContent = `The sum of the first ${number} numbers is ${sum}.`;
+        }
+    </script>
+    <p id="result"></p>
+</body>
+</html>

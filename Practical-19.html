@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practcal-3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        input[type="number"] {
+            width: 100px;
+            padding: 5px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 5px 10px;
+            margin-right: 5px;
+        }
+        li {
+            list-style-type: none;
+            margin: 5px 0;
+        }
+        li button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        li button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Calculator (Functions + Conditonals)</h1>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+    
+        <li><button onclick="calculate('+')">Add</button></li>
+        <li><button onclick="calculate('-')">Subtract</button></li>
+        <li><button onclick="calculate('*')">Multiply</button></li>
+        <li><button onclick="calculate('/')">Divide</button></li>
+        <li><button onclick="calculate('%')">Modulus</button></li>
+        <li><button onclick="calculate('**')">Exponent</button></li>
+        <li><button onclick="calculate('sqrt')">Square Root</button></li>
+        <script>
+            function calculate(operator) {
+                const num1 = parseFloat(document.getElementById('num1').value);
+                const num2 = parseFloat(document.getElementById('num2').value);
+                let result;
+
+                if (isNaN(num1) || isNaN(num2)) {
+                    alert('Please enter valid numbers.');
+                    return;
+                }
+
+                switch (operator) {
+                    case '+':
+                        result = num1 + num2;
+                        break;
+                    case '-':
+                        result = num1 - num2;
+                        break;
+                    case '*':
+                        result = num1 * num2;
+                        break;
+                    case '/':
+                        if (num2 === 0) {
+                            alert('Cannot divide by zero.');
+                            return;
+                        }
+                        result = num1 / num2;
+                        break;
+                    case '%':
+                        result = num1 % num2;
+                        break;
+                    case '**':
+                        result = Math.pow(num1, num2);
+                        break;
+                    case 'sqrt':
+                        if (num1 < 0) {
+                            alert('Cannot calculate square root of a negative number.');
+                            return;
+                        }
+                        result = Math.sqrt(num1);
+                        break;
+                    default:
+                        alert('Invalid operator.');
+                        return;
+                }
+
+                alert(`The result is: ${result}`);
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Practical-34</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+        text-align: center;
+        padding: 50px;
+        }
+        button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        }
+        button:hover {
+        background-color: #007BFF;
+        color: white;
+        }
+        </style>
+</head>
+<body>
+
+  <h1>Even Numbers from 1 to 20</h1>
+  <button onclick="printEvenNumbers()">Show Even Numbers</button>
+
+  <ul id="evenList"></ul>
+
+  <script>
+    function printEvenNumbers() {
+      const list = document.getElementById("evenList");
+      list.innerHTML = ""; // Clear any previous results
+
+      for (let i = 1; i <= 20; i++) {
+        if (i % 2 === 0) {
+          const li = document.createElement("li");
+          li.textContent = i;
+          list.appendChild(li);
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>

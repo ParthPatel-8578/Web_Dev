@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-21</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #007BFF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Print 5 Array elements(numbers or strings)</h1>
+    <button onclick="printArrayElements()">Print Array Elements</button>
+    <script>
+        function printArrayElements() {
+            const array = [1, 2, 3, 4, 5]; // Example array
+            let output = '';
+
+            for (let i = 0; i < array.length; i++) {
+                output += array[i] + ' ';
+            }
+
+            alert(output);
+        }
+    </script>
+
+</body>
+</html>

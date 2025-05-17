@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Practical-30</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+        text-align: center;
+        padding: 50px;
+        }
+        button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        }
+        button:hover {
+        background-color: #007BFF;
+        color: white;
+        }
+        </style>
+</head>
+<body>
+
+  <h1>Add Two Numbers</h1>
+
+  <input type="number" id="num1" placeholder="Enter first number">
+  <input type="number" id="num2" placeholder="Enter second number">
+  <button onclick="addNumbers()">Add</button>
+
+  <p id="result"></p>
+
+  <script>
+    function add(a, b) {
+      return a + b;
+    }
+
+    function addNumbers() {
+      const number1 = parseFloat(document.getElementById("num1").value);
+      const number2 = parseFloat(document.getElementById("num2").value);
+      const result = document.getElementById("result");
+
+      if (isNaN(number1) || isNaN(number2)) {
+        result.textContent = "Please enter valid numbers.";
+        return;
+      }
+
+      const sum = add(number1, number2);
+      result.textContent = "Sum: " + sum;
+    }
+  </script>
+
+</body>
+</html>

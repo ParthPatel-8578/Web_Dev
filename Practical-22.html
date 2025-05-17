@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Practical-21</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+        text-align: center;
+        padding: 50px;
+        }
+        button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        }
+        button:hover {
+        background-color: #007BFF;
+        color: white;
+        }
+        input {
+        padding: 10px;
+        font-size: 16px;
+        width: 300px;
+        }
+        
+    </style>
+</head>
+<body>
+
+  <h1>Find Maximum Number</h1>
+
+  <p>Enter numbers separated by commas (e.g., 5, 12, 8, 3, 20):</p>
+  <input type="text" id="numberArray" placeholder="Enter numbers">
+  <button onclick="findMax()">Find Maximum</button>
+
+  <p id="maxResult"></p>
+
+  <script>
+    function findMaximum(arr) {
+      if (arr.length === 0) {
+        return "Array is empty.";
+      }
+
+      let max = arr[0];
+      for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+          max = arr[i];
+        }
+      }
+      return max;
+    }
+
+    function findMax() {
+      const input = document.getElementById("numberArray").value;
+      const numArray = input.split(',').map(Number);
+      
+      if (numArray.some(isNaN)) {
+        document.getElementById("maxResult").textContent = "Please enter valid numbers.";
+        return;
+      }
+
+      const max = findMaximum(numArray);
+      document.getElementById("maxResult").textContent = "Maximum number: " + max;
+    }
+  </script>
+
+</body>
+</html>

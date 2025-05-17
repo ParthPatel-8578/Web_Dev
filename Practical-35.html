@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Practical-35</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+        text-align: center;
+        padding: 50px;
+        }
+        button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        }
+        button:hover {
+        background-color: #007BFF;
+        color: white;
+        }
+        </style>
+</head>
+<body>
+
+  <h1>Count Characters in a String</h1>
+
+  <input type="text" id="textInput" placeholder="Enter a string">
+  <button onclick="countCharacters()">Count</button>
+
+  <p id="result"></p>
+
+  <script>
+    function countCharacters() {
+      const input = document.getElementById("textInput").value;
+      const result = document.getElementById("result");
+
+      const length = input.length;
+      result.textContent = `The string has ${length} character(s).`;
+    }
+  </script>
+
+</body>
+</html>
